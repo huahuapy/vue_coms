@@ -1,0 +1,142 @@
+*{
+  padding: 0 0;
+  margin: 0 0;   
+  /*点击高亮我们需要清除清除 设置为transparent 完成透明*/
+  -webkit-tap-highlight-color: transparent;
+  /*禁用WebKit内核浏览器调整文字大小功能，解决谷歌中字体最下12px。-webkit-text-size-adjust放在body上会导致页面缩放失效*/ 
+  -webkit-text-size-adjust:none;
+  -webkit-user-select:none;
+  -ms-user-select: none;
+  user-select: none; 
+  font-family: "微软雅黑";
+}
+
+img {
+  max-width: 100%;
+  border: none;
+  vertical-align: middle;
+}
+
+body,
+p,
+form,
+input,
+button,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-size: 100%;
+}
+
+input,
+textarea {
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  -webkit-appearance: none;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+body {
+  margin: 0 auto;
+	min-width: 320px;
+  max-width: 750px;
+  background-color: #f1f1f1;
+  color: #555;
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a:link,
+a:active,
+a:visited{
+  text-decoration: none;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+li,
+ol{
+  list-style: none;
+}
+
+
+
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+
+.clearfix {
+  overflow: hidden;
+  clear: both;
+}
+/*清除浮动*/
+.clearfix:before {
+	content: “.”;
+	display: table;
+} 
+
+
