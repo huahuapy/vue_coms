@@ -9,7 +9,8 @@ module.exports = {
   },
   output:{
       path:path.resolve(__dirname,'dist'),
-      filename: 'static/js/[name].bundle.js'
+      filename: 'static/js/[name].bundle.js',
+      publicPath: '/'
   },
   module:{
     rules: [
@@ -20,7 +21,20 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: [
+              [
+                '@babel/preset-env', {
+                  useBuiltIns: 'usage',
+                  'corejs': 2
+                }
+              ]
+            ],
+            plugins: [              
+              ["babel-plugin-component", {
+                "libraryName": "mint-ui",  //"babel-plugin-component"插件针对mint按需打包
+                "style": true
+              }]
+            ]
           }
         }
       },
@@ -58,6 +72,16 @@ module.exports = {
     port: 8080,
     open: true,
     //quiet: true
+    proxy: {
+      "/api": {
+        target: "http://localhost:4000",
+        pathRewrite: {
+          "^/api" : ""
+        },
+        changeOrigin: true
+      }
+    },
+    historyApiFallback: true
   },
   devtool: 'cheap-module-eval-source-map',
   //

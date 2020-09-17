@@ -1,4 +1,20 @@
-img {
-  width: 200px;
-  height: 200px;
+*{
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  outline: none;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  outline: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
 }
